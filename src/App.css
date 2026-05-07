@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.loginbg{
+  width: 100%;
+  height: 100vh;
+  background: url('./assets/images/a7.jpg') no-repeat center;
+  background-size: cover;
+  padding: 15vh 0 36vh 0;
+  
+}
+.form-container {
+  width: 50%;
+  margin: 0 auto;
+  padding: 50px;
+  /* background-color: #333; */
+  border-radius: 10px;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
+  color:#fff;
+}
+.headlo{
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 36px;
+  color: #b38bff;
+}
+.loginfo {
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+}
+
+.logininput{
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #FFFFFF3B;
+  border-radius: 2vw;
+  padding: 2vh 0 2vh 2vw;
+}
+
+.loginbutton{
+  padding: 10px;
+  background-color: #FFFFFF;
+  color: #2D2D2D !important;
+  text-align: center;
+  border: none;
+  border-radius: 2vw;
+  cursor: pointer;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.2s ease-in-out;
+}
+.loginbutton:hover {
+  background-color: #2D2D2D;
+  color: #FFFFFF !important;
+}
+.logina{
+  text-decoration: none;
+  color: #FFF !important;
+  font-size: 18px;
+  transition: color 0.2s ease-in-out;
+}
+.logina:hover {
+  color: #c7c0c0 !important;
+  text-decoration: underline !important;
+}
+.loginp{
+  text-align: center;
+  margin: 8px;
+}
+
