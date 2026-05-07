@@ -1,4 +1,4 @@
-# React + Vite
+# FIT-TRACK
 
 📖 About
 FitTrack is a full-stack web application built as a Final Year Project at Chitkara University, Rajpura, Punjab. It helps users manage their daily fitness routines, track health habits, and never miss a medicine dose — all in one place.
