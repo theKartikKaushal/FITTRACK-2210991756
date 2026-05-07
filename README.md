@@ -36,11 +36,6 @@ Badge milestones: Century (100pts), Fitness Enthusiast (500pts), Workout Warrior
 Community leaderboard ranked by weekly points
 Toggle your own visibility on the leaderboard
 
-💧 Health Monitoring
-
-Daily water intake tracking with custom goals
-Sleep hours logging
-Mood tracker
 
 🔐 User Authentication
 
