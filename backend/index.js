@@ -13,24 +13,20 @@ app.use(cors({
     'https://theKartikKaushal.github.io',
     'https://fittrack-2210991756-1.onrender.com',
   ],
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   credentials: true,
 }));
-app.use(express.json());
 
 app.options('*', cors());
+app.use(express.json());
 
-mongoose.connect('mongodb+srv://kartik_18:cibBipm3Q4en8hyt@thekartikkaushal.hvf9hgn.mongodb.net/fitness?appName=theKartikKaushal', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+mongoose.connect('mongodb+srv://kartik_18:cibBipm3Q4en8hyt@thekartikkaushal.hvf9hgn.mongodb.net/fitness?appName=theKartikKaushal');
 
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 db.once('open', () => {
   console.log('Connected to MongoDB');
 });
-
 
 app.get('/api/feature/:userId', async (req, res) => {
   try {
@@ -45,7 +41,6 @@ app.post('/api/feature/:userId', async (req, res) => {
   try {
     let feature = await Feature.findOne({ userId: req.params.userId });
     if (feature) {
-      
       await Feature.findOneAndUpdate(
         { userId: req.params.userId },
         { $set: req.body },
@@ -65,7 +60,6 @@ app.post('/api/feature/:userId', async (req, res) => {
     res.status(400).json({ message: error.message });
   }
 });
-
 
 app.get('/api/health/:userId', async (req, res) => {
   try {
@@ -89,36 +83,9 @@ app.post('/api/health/:userId', async (req, res) => {
   }
 });
 
-
-app.get('/api/period/:userId', async (req, res) => {
-  try {
-    const period = await Period.findOne({ userId: req.params.userId });
-    res.json(period || {});
-  } catch (error) {
-    res.status(500).json({ message: error.message });
-  }
-});
-
-app.post('/api/period/:userId', async (req, res) => {
-  try {
-    let period = await Period.findOne({ userId: req.params.userId });
-    if (period) {
-      period.set(req.body);
-      await period.save();
-    } else {
-      period = new Period({ userId: req.params.userId, ...req.body });
-      await period.save();
-    }
-    res.json(period);
-  } catch (error) {
-    res.status(400).json({ message: error.message });
-  }
-});
-
 app.post('/login', async (req, res) => {
   const { username, password } = req.body;
   const user = await User.findOne({ name: username });
-
   if (user) {
     if (user.password === password) {
       res.status(200).send({ msg: 'user exists and password is correct' });
@@ -144,8 +111,6 @@ app.post('/signup', async (req, res) => {
   }
 });
 
-
-// GET all visible leaderboard entries
 app.get('/api/leaderboard', async (req, res) => {
   try {
     const allUsers = await Feature.find({ leaderboardVisible: { $ne: false } });
@@ -158,7 +123,6 @@ app.get('/api/leaderboard', async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 });
-
 
 app.post('/api/leaderboard/:userId', async (req, res) => {
   try {
