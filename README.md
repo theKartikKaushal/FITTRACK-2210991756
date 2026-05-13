@@ -76,7 +76,7 @@ Roll No: 2210991756
 Chitkara University, Rajpura, Punjab
 📧 kartik1756.be22@chitkara.edu.in
 📞 7876604344
-Supervisor: Preeti Saini
+Supervisor:Dr.Preeti Saini
 
 
 📄 License
