@@ -77,7 +77,7 @@ Chitkara University, Rajpura, Punjab
 📧 kartik1756.be22@chitkara.edu.in
 📞 7876604344
 Supervisor: Preeti Saini
-📧 preeti.saini@chitkara.edu.in
+
 
 📄 License
 This project was developed as a Final Year Project and is registered under copyright.
