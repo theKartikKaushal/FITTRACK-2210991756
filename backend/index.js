@@ -11,11 +11,14 @@ app.use(cors({
     'http://localhost:5173',
     'http://localhost:5174',
     'https://theKartikKaushal.github.io',
-  ]
+    'https://fittrack-2210991756-1.onrender.com',
+  ],
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true,
 }));
 app.use(express.json());
 
-mongoose.connect('mongodb+srv://kartik_18:fitness_123@thekartikkaushal.hvf9hgn.mongodb.net/fitness?appName=theKartikKaushal', {
+mongoose.connect('mongodb+srv://kartik_18:kaushal_mongo@thekartikkaushal.hvf9hgn.mongodb.net/fitness?appName=theKartikKaushal', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
