@@ -18,6 +18,8 @@ app.use(cors({
 }));
 app.use(express.json());
 
+app.options('*', cors());
+
 mongoose.connect('mongodb+srv://kartik_18:cibBipm3Q4en8hyt@thekartikkaushal.hvf9hgn.mongodb.net/fitness?appName=theKartikKaushal', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
