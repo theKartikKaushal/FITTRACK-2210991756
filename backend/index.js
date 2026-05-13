@@ -7,14 +7,9 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 app.use(cors({
-  origin: [
-    'http://localhost:5173',
-    'http://localhost:5174',
-    'https://theKartikKaushal.github.io',
-    'https://fittrack-2210991756-1.onrender.com',
-  ],
+  origin: '*',
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  credentials: true,
+  allowedHeaders: ['Content-Type', 'Authorization'],
 }));
 
 app.options('*', cors());
