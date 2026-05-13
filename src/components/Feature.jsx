@@ -10,7 +10,7 @@ import "react-datepicker/dist/react-datepicker.css";
 import { useNavigate } from 'react-router-dom';
 import FitnessQuiz from './Fitnessquiz';
 
-const API_URL = 'http://localhost:5000/api';
+const API_URL = 'https://fittrack-2210991756.onrender.com/api';
 
 const Feature = () => {
     const [activeSection, setActiveSection] = useState('quiz');

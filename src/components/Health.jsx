@@ -3,7 +3,7 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 
-const API_URL = 'http://localhost:5000/api'
+const API_URL = 'https://fittrack-2210991756.onrender.com/api'
 
 const getTimeSlot = (timeStr) => {
   if (!timeStr) return 'Night'

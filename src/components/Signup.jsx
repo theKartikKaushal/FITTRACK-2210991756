@@ -20,7 +20,7 @@ function Signup() {
 
   async function handleSubmit(e) {
     e.preventDefault();
-    const res = await fetch('http://localhost:5000/signup', {
+    const res = await fetch('https://fittrack-2210991756.onrender.com/signup', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
