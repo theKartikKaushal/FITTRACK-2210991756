@@ -6,7 +6,13 @@ import { User, Feature, Health } from './models.js';
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-app.use(cors());
+app.use(cors({
+  origin: [
+    'http://localhost:5173',
+    'http://localhost:5174',
+    'https://theKartikKaushal.github.io',
+  ]
+}));
 app.use(express.json());
 
 mongoose.connect('mongodb://127.0.0.1:27017/fitness', {
